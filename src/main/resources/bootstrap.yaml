@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-boot-mongodb-demo
+  cloud:
+    config:
+      enabled: true
+      uri: https://spring-boot-config-server.herokuapp.com/apps-config-repo
+      username: '{cipher}2b433c0ee08d664c7bd165d95435fe262d9b990651afa3119295697c293ba178'
+      password: '{cipher}09c0b2d9d3c31e334a515d33fd42fc090ed3fec4af32d512067dfa73099bdcb4'
+      label: 
+      fail-fast: true
+
+encrypt:
+  key: 3F5DCD1A343B55F15A675C32D6AE1
