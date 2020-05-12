@@ -4,23 +4,24 @@
 package com.codify.mongodb.repository;
 
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.TextCriteria;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import com.codify.mongodb.constant.RestaurantType;
 import com.codify.mongodb.domain.Address;
@@ -32,9 +33,9 @@ import com.codify.mongodb.domain.RestaurantReview;
  * @author upadhyaybs
  *
  */
-@RunWith(SpringRunner.class)
 @ActiveProfiles("test")	
 @DataMongoTest
+@TestInstance(Lifecycle.PER_CLASS)
 public class RestaurantDatabaseTests {
 	
 	@Autowired
@@ -43,7 +44,7 @@ public class RestaurantDatabaseTests {
 	@Autowired
 	private  MongoTemplate template;
 	
-	@Before
+	@BeforeAll
 	public void setup() {
 		
 		CommunicationChannel channel1=new CommunicationChannel("email@pizzhut.com", "999-000-2020", "", "999-00-2020");
