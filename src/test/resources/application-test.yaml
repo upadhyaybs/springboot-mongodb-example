@@ -4,7 +4,7 @@ spring:
   application:
     name: spring-boot-mongodb-demo
   profiles:
-        active: '${ACTIVE_PROFILE}'
+        active: test
   cloud:
     config:
       enabled: true
