@@ -1,0 +1,11 @@
+server:
+    port: 9095
+spring:
+  application:
+    name: spring-boot-mongodb-demo
+  profiles:
+        active: dev
+  data:
+    mongodb:
+      database: <specify-database-name>
+      uri: <specify-mongodb-uri>
