@@ -1,6 +1,7 @@
 package com.codify.mongodb.service;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -12,8 +13,6 @@ import com.codify.mongodb.domain.Request;
 import com.codify.mongodb.domain.Restaurant;
 import com.codify.mongodb.exception.ResourceNotFoundException;
 import com.codify.mongodb.repository.IRestaurantRepository;
-import com.codify.mongodb.util.QueryBuilder;
-import com.querydsl.core.types.Predicate;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -138,12 +137,16 @@ public class RestaurantServiceImpl implements IRestaurantService {
 
 	@Override
 	public List<Restaurant> filterByFields(Request request) throws ResourceNotFoundException {
+		/*
 		Predicate fieldFilter=QueryBuilder.multiFieldRestaurantSearchFilter(request.getParameters());
 		Iterable<Restaurant> restaurants=this.repository.findAll(fieldFilter);
 		if (restaurants == null ) {
 			throw new ResourceNotFoundException("Resource(s) not found");
 		}
 		return (List<Restaurant>) restaurants;
+
+		 */
+		return Collections.emptyList();
 	}
 
 	@Override

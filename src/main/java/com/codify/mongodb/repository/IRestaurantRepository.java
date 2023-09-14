@@ -15,7 +15,7 @@ import com.codify.mongodb.domain.Restaurant;
  *
  */
 @Repository
-public interface IRestaurantRepository extends MongoRepository<Restaurant, String> , QuerydslPredicateExecutor<Restaurant>{
+public interface IRestaurantRepository extends MongoRepository<Restaurant, String>{
 	
 	public List<Restaurant> findAllByNameContains(String name);
 	

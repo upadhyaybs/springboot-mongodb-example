@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import com.codify.mongodb.domain.QRestaurant;
+
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 
@@ -12,6 +12,7 @@ import com.querydsl.core.types.dsl.BooleanExpression;
  * @author upadhyaybs
  *
  */
+
 public final class QueryBuilder {
 
 	private QueryBuilder() {}
@@ -21,6 +22,7 @@ public final class QueryBuilder {
 	 * @param parameters
 	 * @return
 	 */
+	/*
 	public static Predicate multiFieldRestaurantSearchFilter(Map<String, Object> parameters) {
 		QRestaurant query = new QRestaurant("multiFieldRestaurantSearchFilter");
 		Predicate filter = null;
@@ -51,12 +53,15 @@ public final class QueryBuilder {
 		return filter;
 	}
 
+	 */
+
 	/**
 	 * 
 	 * @param query
 	 * @param parameters
 	 * @param criteriaMap
 	 */
+	/*
 	private static void appendNameCriteria(QRestaurant query, Map<String, Object> parameters,Map<String, BooleanExpression> criteriaMap) {
 		BooleanExpression nameFilter = null;
 		if (parameters.containsKey("name")) {
@@ -67,13 +72,14 @@ public final class QueryBuilder {
 			criteriaMap.put("name", nameFilter);
 		}
 	}
-
+	*/
 	/**
 	 * 
 	 * @param query
 	 * @param parameters
 	 * @param criteriaMap
 	 */
+	/*
 	private static void appendAddressCriteria(QRestaurant query, Map<String, Object> parameters,Map<String, BooleanExpression> criteriaMap) {
 		BooleanExpression filter = null;
 		BooleanExpression zipFilter = null;
@@ -116,13 +122,14 @@ public final class QueryBuilder {
 			criteriaMap.put("address", filter);
 		}
 	}
-
+	*/
 	/**
 	 * 
 	 * @param query
 	 * @param parameters
 	 * @param criteriaMap
 	 */
+	/*
 	private static void appendReviewCriteria(QRestaurant query, Map<String, Object> parameters,Map<String, BooleanExpression> criteriaMap) {
 		BooleanExpression reviewFilter = null;
 		if (parameters.containsKey("rating")) {
@@ -134,4 +141,6 @@ public final class QueryBuilder {
 			criteriaMap.put("review", reviewFilter);
 		}
 	}
+
+	 */
 }
